@@ -1,0 +1,13 @@
+--- doxygen/CMakeLists.txt.ori	2018-10-01 18:04:23.000000000 -0700
++++ doxygen/CMakeLists.txt	2018-10-01 18:04:27.000000000 -0700
+@@ -40,8 +40,8 @@
+ endif()
+ 
+ if (${CMAKE_SYSTEM} MATCHES "Darwin")
+-    set(CMAKE_CXX_FLAGS "-Wno-deprecated-register -mmacosx-version-min=10.5 ${CMAKE_CXX_FLAGS}")
+-    set(CMAKE_C_FLAGS "-Wno-deprecated-register -mmacosx-version-min=10.5 ${CMAKE_C_FLAGS}")
++    set(CMAKE_CXX_FLAGS "-Wno-deprecated-register -mmacosx-version-min=10.9 ${CMAKE_CXX_FLAGS}")
++    set(CMAKE_C_FLAGS "-Wno-deprecated-register -mmacosx-version-min=10.9 ${CMAKE_C_FLAGS}")
+     find_library(CORESERVICES_LIB CoreServices)
+     set(EXTRA_LIBS ${CORESERVICES_LIB})
+ endif()
